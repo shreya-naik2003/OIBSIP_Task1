@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+  background-color: #222831;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Display */
+.display {
+  background-color: #393e46;
+  color: #eeeeee;
+  font-size: 2.5rem;
+  padding: 25px 20px;
+  border-radius: 15px;
+  text-align: right;
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.4);
+  overflow-x: auto;
+  user-select: none;
+  margin-bottom: 25px;
+  min-height: 60px;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Common button styles */
+.btn {
+  background-color: #00adb5;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px #007a7f;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Button press effect */
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #007a7f;
+}
+
+/* Operator buttons */
+.operator {
+  background-color: #393e46;
+  box-shadow: 0 6px #1f232a;
+}
+
+/* Function buttons */
+.function {
+  background-color: #ff5722;
+  box-shadow: 0 6px #b0391a;
+}
+
+/* Equals button spans two columns */
+.equals {
+  grid-column: span 1;
+  background-color: #00b894;
+  box-shadow: 0 6px #067749;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Zero button spans two columns */
+.zero {
+  grid-column: span 2;
+}
+
+/* Hover effects */
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.operator:hover {
+  filter: brightness(130%);
+}
+
+.function:hover {
+  filter: brightness(130%);
+}
+
+.equals:hover {
+  filter: brightness(120%);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90vw;
+  }
+
+  .display {
+    font-size: 2rem;
+    padding: 20px 15px;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+}
